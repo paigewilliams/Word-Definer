@@ -1,15 +1,10 @@
 <h2>Word: <%= @word[1] %></h2><br>
-<ul>
-  <% @word.each do |definition| %>
-  <li>
-    <%= definition %>
-  </li>
-  <% end %>
-</ul>
-
-
-<!-- <h3>Definition: <%= @word[2] %></h3> -->
-
+<h3>Definition(s): </h3>
+  <ul>
+    <% @word[2..@word.length].each do |definition| %>
+    <li> <%= definition %> </li>
+    <% end %>
+  </ul>
 
 
 
@@ -20,5 +15,5 @@
   </div>
   <input type="submit" name="submit" value="Add Additional Definition" class="btn btn-warning">
 </form>
-<!-- <a href="/add_definition" id="<%= @id %>">Add a second definition</a><br> -->
+
 <a href="/words">back</a>
