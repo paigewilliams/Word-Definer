@@ -1,5 +1,18 @@
 <h2>Word: <%= @word[1] %></h2><br>
-<h3>Definition: <%= @word[2] %></h3>
+<ul>
+  <% @word.each do |definition| %>
+  <li>
+    <%= definition %>
+  </li>
+  <% end %>
+</ul>
+
+
+<!-- <h3>Definition: <%= @word[2] %></h3> -->
+
+
+
+
 <form class="add_definition" action="/add/definition/<%=@word[0] %>">
   <div class="form-group">
 

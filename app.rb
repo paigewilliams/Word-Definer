@@ -6,7 +6,7 @@ require('./lib/definer')
 
 get('/') do
   @word_list = Word.word_list()
-
+  Word.clear()
   erb(:input)
 end
 
@@ -28,6 +28,7 @@ post('/words')do
 end
 
 get('/definition/:id') do
+  @@display = "display:block"
   @word_list = Word.word_list()
   @id = params[:id].to_i
   @word = Word.find_word(@id)
