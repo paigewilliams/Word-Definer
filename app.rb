@@ -26,3 +26,27 @@ post('/words')do
 
   erb(:output)
 end
+
+get('/definition/:id') do
+  @word_list = Word.word_list()
+  @id = params[:id].to_i
+  @word = Word.find_word(@id)
+
+  erb(:definition)
+end
+
+get('/add/definition/:id') do
+  @word_list = Word.word_list()
+  @id = params[:id].to_i
+  erb(:add_definition)
+end
+
+post('/add_additional_definition') do
+  @word_list = Word.word_list()
+  id = params[:id].to_i
+  definition = params[:additional_definition]
+  @word_list.add_definition(id, definition)
+  @word_list = Word.word_list()
+  binding.pry
+  erb(:definition)
+end

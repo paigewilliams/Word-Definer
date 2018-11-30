@@ -1,0 +1,11 @@
+<h2>Word: <%= @word[1] %></h2><br>
+<h3>Definition: <%= @word[2] %></h3>
+<form class="add_definition" action="/add/definition/<%=@word[0] %>">
+  <div class="form-group">
+
+    <input type="hidden" name="<%= @id %>"><br>
+  </div>
+  <input type="submit" name="submit" value="Add Additional Definition" class="btn btn-warning">
+</form>
+<!-- <a href="/add_definition" id="<%= @id %>">Add a second definition</a><br> -->
+<a href="/words">back</a>
