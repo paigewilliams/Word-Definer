@@ -24,13 +24,13 @@ describe("Word")do
     end
   end
 
-  # describe("#add_definition")do
-  #   it("adds a second definition to a word")do
-  #   word = Word.new("abolish", "formally put an end to")
-  #   word.add_word(word.word, word.definition)
-  #   word.add_definition("to completely do away with something")
-  #   expect(Word.word_list()).to(eq([[0, "abolish", "formally put an end to", "to completely do away with something"]]))
-  #   end
-  # end
+  describe("#add_definition")do
+    it("adds a second definition to a word")do
+    word = Word.new("abolish", "formally put an end to")
+    word.add_word(word.word, word.definition)
+    word.add_definition(0, "to completely do away with something")
+    expect(Word.word_list()).to(eq([[0, "abolish", "formally put an end to", "to completely do away with something"]]))
+    end
+  end
 
 end
