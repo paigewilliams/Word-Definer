@@ -21,7 +21,7 @@ describe('the iframe', {:type => :feature}) do
   end
 end
 
-describe('the iframe', {:type => :feature}) do
+describe('the definition page', {:type => :feature}) do
   it('displays the definition of the word ') do
     visit('/')
     fill_in('word', :with => 'abolish')
@@ -29,5 +29,21 @@ describe('the iframe', {:type => :feature}) do
     click_button('Submit')
     visit('/definition/:id')
     expect(page).to have_content('formally put an end to')
+  end
+end
+
+describe('the additional definition page', {:type => :feature}) do
+  it('displays the definition of the word ') do
+    visit('/')
+    fill_in('word', :with => 'abolish')
+    fill_in('definition', :with => 'formally put an end to')
+    click_button('Submit')
+    visit('/words')
+    visit('/definition/:id')
+    click_button('Add Additional Definition')
+    visit('/add/definition/:id')
+    fill_in('additional_definition', :with => 'permenantely stop')
+    click_button('Add')
+    expect(page).to have_content('permenantely stop')
   end
 end
