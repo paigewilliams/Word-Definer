@@ -39,11 +39,4 @@ class Word
     end
   end
 
-  # def find_definitions(length)
-  #   definitions = []
-  #   @word[2..@word.length].each do |definition|
-  #     definitions.push(definition)
-  #   end
-  #   definitions
-  # end
 end

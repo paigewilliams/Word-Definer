@@ -12,22 +12,22 @@ This is an exercise in using custom Ruby classes and Sinatra. The goal is to cre
 
 ## Specs  
 
-View specs [here](https://github.com/paigewilliams/anagrams-antigrams/blob/master/spec/anagram_spec.rb).
+View specs [here](https://github.com/paigewilliams/Word-Definer/tree/master/spec).
 
 ## Objectives
 
-- [] Sinatra application uses views, instance variables and forms.
-- [] Sinatra routes process GET and POST requests/responses.
+- [x] Sinatra application uses views, instance variables and forms.
+- [x] Sinatra routes process GET and POST requests/responses.
 - [] Project includes thorough and passing integration specs.
 - [] Application is deployed to Heroku (Include the link in your README).
-- [] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology
-- [] Project is in a polished, portfolio-quality state
-- [] Required functionality was present by the end of class on Friday. **There should be at least 11 commits.**
-- [] Previous objectives are in place.
+- [x] Project demonstrates a thorough understanding of this weeks concepts. If prompted, you can discuss your with an instructor using correct terminology
+- [x] Project is in a polished, portfolio-quality state
+- [x] Required functionality was present by the end of class on Friday. **There should be at least 11 commits.**
+- [x] Previous objectives are in place.
 
 ## Setup and Installation
 
-* Clone the project from https://github.com/paigewilliams/anagrams-antigrams.git to a local directory
+* Clone the project from https://github.com/paigewilliams/Word-Definer.git to a local directory
 
 ## Support and Contact Details
 

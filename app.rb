@@ -17,8 +17,8 @@ get('/words')do
 end
 
 post('/words')do
-
-  word = params[:word]
+  @@display = "display:block"
+  word = params[:word].capitalize
   definition = params[:definition]
   @input_word = Word.new(word, definition)
   @input_word.add_word(word, definition)
