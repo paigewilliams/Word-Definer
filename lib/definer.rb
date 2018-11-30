@@ -26,9 +26,9 @@ class Word
     @@word_list.push([@id, word, definition])
   end
 
-  def add_definition(id, defintion)
+  def add_definition(id, definition)
     word = Word.find_word(id)
-    word.push(defintion)
+    word.push(definition)
   end
 
   def self.find_word(id)

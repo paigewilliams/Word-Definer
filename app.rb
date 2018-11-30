@@ -45,8 +45,8 @@ post('/add_additional_definition') do
   @word_list = Word.word_list()
   id = params[:id].to_i
   definition = params[:additional_definition]
-  @word_list.add_definition(id, definition)
+  @word = Word.find_word(id)
+  @word.push(definition)
   @word_list = Word.word_list()
-  binding.pry
   erb(:definition)
 end
