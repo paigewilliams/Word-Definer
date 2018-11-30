@@ -1,0 +1,9 @@
+<h3 style="<%= @@display %>">New Words:</h3>
+
+<ul>
+  <% @word_list.each do |word| %>
+  <li>
+    <%= word[1] %>
+  </li>
+  <% end %>
+</ul>
