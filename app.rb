@@ -5,6 +5,7 @@ also_reload('lib/**/*.rb')
 require('./lib/definer')
 
 get('/') do
+  Word.clear()
   @word_list = Word.word_list()
   erb(:input)
 end
