@@ -10,7 +10,7 @@
 
 This is an exercise in using custom Ruby classes and Sinatra. The goal is to create an app for children to add words that they don't know to a list. The user is able to see the definition of the word when they click on a word, and add more than one definition to each word.
 
-View the app deployed [here](https://protected-temple-83689.herokuapp.com/)
+View the app deployed [here](https://sleepy-wildwood-99034.herokuapp.com/)
 
 ## Specs  
 
