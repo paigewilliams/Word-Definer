@@ -6,14 +6,12 @@ require('./lib/definer')
 
 get('/') do
   @word_list = Word.word_list()
-
   erb(:input)
 end
 
 get('/words')do
   @word_list = Word.word_list()
-  @@display = "display:none"
-  erb(:output)
+  erb(:word_list)
 end
 
 post('/words')do
@@ -23,15 +21,13 @@ post('/words')do
   @input_word = Word.new(word, definition)
   @input_word.add_word(word, definition)
   @word_list = Word.word_list()
-
-  erb(:output)
+  erb(:word_list)
 end
 
 get('/definition/:id') do
   @word_list = Word.word_list()
   @id = params[:id].to_i
   @word = Word.find_word(@id)
-
   erb(:definition)
 end
 
@@ -48,9 +44,5 @@ post('/add_additional_definition') do
   @word = Word.find_word(id)
   @word.push(definition)
   @word_list = Word.word_list()
-
   erb(:definition)
 end
-
-
-# [[0, "abolish", "formally put an end to", "to get rid of", "sometimes"]]
